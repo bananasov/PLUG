@@ -3,11 +3,8 @@
     <PropertyGroup>
         <Product>$(AssemblyName)</Product>
         <Version>1.0.0</Version>
-
-        <TargetFramework>netstandard2.0</TargetFramework>
-
+        <TargetFramework>netstandard2.1</TargetFramework>
         <PackageId>PLUG</PackageId>
-
         <RootNamespace>P.L.U.G</RootNamespace>
     </PropertyGroup>
 
@@ -23,6 +20,7 @@
                           PrivateAssets="all"/>
 
         <Reference Include="$(DependsDir)/Assembly-CSharp.dll" Publicize="true"/>
+        <Reference Include="$(HookgenDir)/MMHOOK_Assembly-CSharp.dll" Publicize="true"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -37,5 +35,4 @@
     </ItemGroup>
 
     <Import Project="$(SolutionDir)Config.Build.user.props"/>
-
 </Project>

@@ -8,6 +8,7 @@
         <GameDir>full/path/to/game</GameDir>
         <PluginsDir>$(GameDir)/BepInEx/plugins</PluginsDir>
         <DependsDir>$(GameDir)/Obenseuer_Data/Managed</DependsDir>
+        <HookgenDir>path/to/monomod-hookgen/dir</HookgenDir>
         <StagingDir>$(SolutionDir)artifacts/dist</StagingDir>
         <FinalAssemblyName>$(AssemblyName).dll</FinalAssemblyName>
         <ZipFileName>$(AssemblyName)-$(Version).zip</ZipFileName>

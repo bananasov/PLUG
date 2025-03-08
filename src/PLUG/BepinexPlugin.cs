@@ -1,5 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using HarmonyLib;
+using PLUG.Patches;
 using PLUG.Settings;
 
 
@@ -15,6 +17,8 @@ public class Plugin : BaseUnityPlugin
     {
         Log = Logger;
         Settings = new PlugSettings(Config);
+
+        PlayerHealthPatches.Initialize();
         
         Log.LogInfo($"Plugin {LCMPluginInfo.PLUGIN_NAME} version {LCMPluginInfo.PLUGIN_VERSION} is loaded!");
     }
