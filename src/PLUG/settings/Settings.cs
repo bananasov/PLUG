@@ -4,6 +4,6 @@ namespace PLUG.Settings;
 
 public class PlugSettings(ConfigFile config)
 {
-    public ConfigEntry<bool> MySettingsBool =
-        config.Bind<bool>("SectionName", "MySettingsBool", true, "This is an example boolean setting!");
+    public ConfigEntry<string> ServerURI =
+        config.Bind<string>("Buttplug", "Server URI", "ws://127.0.0.1:12345", "The URI for the Intiface server");
 }

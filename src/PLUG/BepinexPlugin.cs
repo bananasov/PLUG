@@ -1,6 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using HarmonyLib;
+using PLUG.Buttplug;
 using PLUG.Patches;
 using PLUG.Settings;
 
@@ -12,11 +12,15 @@ public class Plugin : BaseUnityPlugin
 {
     internal static ManualLogSource Log = null!;
     internal static PlugSettings Settings = null!;
+    internal static DeviceManager DeviceManager { get; private set; } = null!;
 
     private void Awake()
     {
         Log = Logger;
         Settings = new PlugSettings(Config);
+        
+        DeviceManager = new DeviceManager("P.L.U.G", Settings.ServerURI.Value);
+        DeviceManager.ConnectDevices();
 
         PlayerHealthPatches.Initialize();
         
