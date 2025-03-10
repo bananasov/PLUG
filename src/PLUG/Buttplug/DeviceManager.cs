@@ -78,7 +78,7 @@ public class DeviceManager
 
         async void Action(ButtplugClientDevice device)
         {
-            await device.VibrateAsync(Mathf.Clamp((float)intensity, 0f, 1.0f));
+            await device.VibrateAsync(Mathf.Clamp(intensity, 0f, 1.0f));
             await Task.Delay((int)(time * 1000f));
             await device.VibrateAsync(0.0f);
         }

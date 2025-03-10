@@ -11,6 +11,13 @@ public static class PlayerHealthPatches
     {
         orig(self, damage, savingGrace, enemyIndex);
         
+        if (damage == 0) return;
+        
         Plugin.Log.LogInfo($"We got hurt for {damage} damage!");
+        
+        if (Plugin.DeviceManager.IsConnected()) // TODO: add config for enabling and timings
+        {
+            Plugin.DeviceManager.VibrateConnectedDevicesWithDuration(damage / 100f, 1); 
+        }
     }
 }
