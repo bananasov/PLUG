@@ -4,7 +4,6 @@ using PLUG.Buttplug;
 using PLUG.Patches;
 using PLUG.Settings;
 
-
 namespace PLUG;
 
 [BepInPlugin(LCMPluginInfo.PLUGIN_GUID, LCMPluginInfo.PLUGIN_NAME, LCMPluginInfo.PLUGIN_VERSION)]
@@ -23,6 +22,7 @@ public class Plugin : BaseUnityPlugin
         DeviceManager.ConnectDevices();
 
         PlayerHealthPatches.Initialize();
+        TruckMenuAnimatedPatches.Initialize();
         
         Log.LogInfo($"Plugin {LCMPluginInfo.PLUGIN_NAME} version {LCMPluginInfo.PLUGIN_VERSION} is loaded!");
     }

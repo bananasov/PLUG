@@ -15,9 +15,8 @@ public static class PlayerHealthPatches
         
         Plugin.Log.LogInfo($"We got hurt for {damage} damage!");
         
-        if (Plugin.DeviceManager.IsConnected()) // TODO: add config for enabling and timings
-        {
-            Plugin.DeviceManager.VibrateConnectedDevicesWithDuration(damage / 100f, 1); 
-        }
+        if (!Plugin.DeviceManager.IsConnected() && !Plugin.Settings.VibrateOnDamage.Value) return; // TODO: add config for enabling and timings
+        
+        Plugin.DeviceManager.VibrateConnectedDevicesWithDuration(damage / 100f, 1);
     }
 }
