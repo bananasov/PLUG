@@ -11,7 +11,7 @@ public static class TruckMenuAnimatedPatches
     {
         orig(self, triggerName);
         
-        Plugin.Log.LogInfo($"Truck menu event {triggerName} got called!");
+        Plugin.Log.LogDebug($"Truck menu event {triggerName} got called!");
 
         if (!Plugin.DeviceManager.IsConnected()) return;
         
