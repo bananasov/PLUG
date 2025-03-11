@@ -18,11 +18,12 @@ public class Plugin : BaseUnityPlugin
         Log = Logger;
         Settings = new PlugSettings(Config);
         
-        DeviceManager = new DeviceManager("P.L.U.G", Settings.ServerURI.Value);
+        DeviceManager = new DeviceManager("P.L.U.G.", Settings.ServerURI.Value);
         DeviceManager.ConnectDevices();
 
         PlayerHealthPatches.Initialize();
         TruckMenuAnimatedPatches.Initialize();
+        PhysGrabObjectImpactDetectorPatches.Initialize(); // That is one hell of a class name, enterprise C# everyone
         
         Log.LogInfo($"Plugin {LCMPluginInfo.PLUGIN_NAME} version {LCMPluginInfo.PLUGIN_VERSION} is loaded!");
     }
