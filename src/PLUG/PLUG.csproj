@@ -28,7 +28,7 @@
         <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2"
                           PrivateAssets="all"/>
 
-        <Reference Include="$(DependsDir)/Assembly-CSharp.dll" Publicize="true"/>
+        <PackageReference Include="R.E.P.O.GameLibs.Steam" Version="0.1.2-ngd.0" />
         <Reference Include="$(HookgenDir)/MMHOOK_Assembly-CSharp.dll" Publicize="true"/>
     </ItemGroup>
 

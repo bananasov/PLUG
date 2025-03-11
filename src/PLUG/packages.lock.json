@@ -50,6 +50,16 @@
         "resolved": "6.8.0",
         "contentHash": "hfZ/f8Mezt8aTkgv9nsvFdYoQ809/AqwsJlOGOPYIfBcG2aAIG3v3ex9d8ZqQuFYyMoucjRg4eKy3VleeGodKQ=="
       },
+      "R.E.P.O.GameLibs.Steam": {
+        "type": "Direct",
+        "requested": "[0.1.2-ngd.0, )",
+        "resolved": "0.1.2-ngd.0",
+        "contentHash": "j9JQv7huf5P+lBkAGQG72Yf/dpcZTDBMnExxOyqZe8NjLgqvbOmO3/vtjWLsT/6FtapYvasry9//apO6XRq/Gg==",
+        "dependencies": {
+          "Newtonsoft.JSON": "13.0.3",
+          "UnityEngine.Modules": "2022.3.21"
+        }
+      },
       "UnityEngine.Modules": {
         "type": "Direct",
         "requested": "[2022.3.21, )",
