@@ -14,7 +14,9 @@ public static class PhysGrabObjectImpactDetectorPatches
     {
         orig(self, valueLost, contactPoint, breakLevel);
         Plugin.Log.LogDebug($"Damaged object for {valueLost} money with level {breakLevel}");
-        
+
+
+        if (valueLost == 0) return;
         if (!Plugin.DeviceManager.IsConnected()) return;
         
         Plugin.DeviceManager.VibrateConnectedDevicesWithDuration(1.0f, 0.1f);
