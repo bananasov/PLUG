@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "LethalPlugging"
 name = "PLUG"
-versionNumber = "1.0.0"
+# versionNumber = "1.0.0"
 description = 'Add certain "Quality of Life" features to R.E.P.O.!'
 websiteUrl = "https://github.com/bananasov/PLUG"
 containsNsfwContent = false
