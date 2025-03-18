@@ -25,6 +25,7 @@ public class Plugin : BaseUnityPlugin
         PlayerHealthGrabPatches.Initialize();
         TruckMenuAnimatedPatches.Initialize();
         PhysGrabObjectImpactDetectorPatches.Initialize(); // That is one hell of a class name, enterprise C# everyone
+        ValuableDiscoverGraphicPatches.Initialize(); // Vibrates when you see a head
         
         Log.LogInfo($"Plugin {LCMPluginInfo.PLUGIN_NAME} version {LCMPluginInfo.PLUGIN_VERSION} is loaded!");
     }
