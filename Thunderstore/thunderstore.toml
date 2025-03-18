@@ -1,0 +1,34 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "LethalPlugging"
+name = "PLUG"
+versionNumber = "1.0.0"
+description = 'Add certain "Quality of Life" features to R.E.P.O.!'
+websiteUrl = "https://github.com/bananasov/PLUG"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack = "5.4.2100"
+Hamunii-AutoHookGenPatcher = "1.0.6"
+
+[build]
+icon = "./icon.png"
+outdir = "../artifacts"
+readme = "../artifacts/dist/README.md"
+
+[[build.copy]]
+source = "../artifacts/dist"
+target = ""
+
+[[build.copy]]
+source = "../LICENSE"
+target = "/LICENSE"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["repo"]
+
+[publish.categories]
+repo = ["clientside", "mods"]

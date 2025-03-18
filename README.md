@@ -24,3 +24,16 @@ Add certain "Quality of Life" features to R.E.P.O.!
 - Start it via the big play button
 - Launch Lethal Company with the mod installed
     - If it doesn't work, go to Intiface settings and enable `Listen on all network interfaces` in the server settings
+
+## For developers
+Copy the `Config.Build.user.props.template` file to `Config.Build.user.props`
+and edit the `GameDir` and `HookgenDir` properties in the second `PropertyGroup`
+
+Set `GameDir` to the path where R.E.P.O. is installed and set `HookgenDir` to
+the path where the auto-generated MMHOOK files are located (e.g. `BepInEx/plugins/MMHOOK/Managed`)
+
+To build the plugin run `dotnet build -p:BuildStaging=true` in your terminal
+(make sure that you are in the correct directory).
+
+### Preparing a Thunderstore publish
+TODO, WRITE THIS
