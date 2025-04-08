@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <Product>$(AssemblyName)</Product>
-        <Version>1.0.0</Version>
+        <Version>0.1.1</Version>
         <TargetFramework>netstandard2.1</TargetFramework>
         <PackageId>PLUG</PackageId>
         <RootNamespace>PLUG</RootNamespace>
@@ -13,40 +13,44 @@
             <IncludeAssets>all</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Buttplug" Version="4.0.0"/>
-        
+        <PackageReference Include="Buttplug" Version="4.0.0" />
+
         <PackageReference Include="Costura.Fody" Version="5.7.0">
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="Fody" Version="6.8.0">
-            <IncludeAssets>runtime; build; compile; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <IncludeAssets
+            >runtime; build; compile; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        
-        <PackageReference Include="MinVer" Version="6.0.0">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2"
-                          PrivateAssets="all"/>
-
-        <PackageReference Include="R.E.P.O.GameLibs.Steam" Version="0.1.2-ngd.0" />
-        <Reference Include="$(HookgenDir)/MMHOOK_Assembly-CSharp.dll" Publicize="true"/>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference
-                Include="BepInEx.Analyzers"
-                PrivateAssets="all"
-                Version="1.*"/>
+            Include="BepInEx.AssemblyPublicizer.MSBuild"
+            Version="0.4.2"
+            PrivateAssets="all"
+        />
 
         <PackageReference
-                Include="BepInEx.Core"
-                Version="5.4.*"/>
+            Include="R.E.P.O.GameLibs.Steam"
+            Version="0.1.2-ngd.0"
+        />
+        <Reference
+            Include="$(HookgenDir)/MMHOOK_Assembly-CSharp.dll"
+            Publicize="true"
+        />
     </ItemGroup>
 
-    <Import Project="$(SolutionDir)Config.Build.user.props"/>
+    <ItemGroup>
+        <PackageReference
+            Include="BepInEx.Analyzers"
+            PrivateAssets="all"
+            Version="1.*"
+        />
+
+        <PackageReference Include="BepInEx.Core" Version="5.4.*" />
+    </ItemGroup>
+
+    <Import Project="$(SolutionDir)Config.Build.user.props" />
 </Project>
