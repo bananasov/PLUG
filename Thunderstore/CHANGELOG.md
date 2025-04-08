@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+## [0.1.1](https://github.com/bananasov/PLUG/compare/v0.1.0..v0.1.1) - 2025-04-08
+
+### Fixes
+
+- Remove MinVer, pain in the ass - ([68a16ab](https://github.com/bananasov/PLUG/commit/68a16ab2e749e4d6ffb7149e42600bfb01a5c7f7)) - bananasov
+
+---
 ## [0.1.0] - 2025-04-08
 
 ### Features
