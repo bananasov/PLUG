@@ -15,14 +15,17 @@ Add certain "Quality of Life" features to R.E.P.O.!
 
 #### Manual
 - Install BepInEx (see [BepInEx Installation Guide](https://docs.bepinex.dev/articles/user_guide/installation/index.html))
-- Launch Lethal Company once with BepInEx installed to ensure that its working and needed folders are present
-- Navigate to your Lethal Company install directory and go to `./BepInEx/plugins`
+- Download [AutoHookGenPatcher](https://thunderstore.io/c/repo/p/Hamunii/AutoHookGenPatcher/) and [DetourContext_Dispose_Fix](https://thunderstore.io/c/repo/p/Hamunii/DetourContext_Dispose_Fix/)
+  - For `DetourContext_Dispose_Fix`, drag and drop the `patchers` folder into the BepInEx directory in the R.E.P.O game directory.
+- Install `AutoHookGenPatcher` and `DetourContext_Dispose_Fix` by dragging and dropping the contents of the BepInEx folder into the R.E.P.O. BepInEx folder
+- Launch R.E.P.O. once with BepInEx installed to ensure that its working and needed folders are present
+- Navigate to your R.E.P.O. install directory and go to `./BepInEx/plugins`
 - Download the mod and unzip it in the installation directory
 
 ### Usage
 - Open Intiface Central (or Engine if you know how to use that)
 - Start it via the big play button
-- Launch Lethal Company with the mod installed
+- Launch R.E.P.O. with the mod installed
     - If it doesn't work, go to Intiface settings and enable `Listen on all network interfaces` in the server settings
 
 ## For developers
